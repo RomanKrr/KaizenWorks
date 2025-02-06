@@ -1,0 +1,206 @@
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+.card {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    /* transform: scale(1.01); */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.082);
+}
+
+.card_image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border-radius: 20px 20px 0 0;
+}
+
+.card_image_cont {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.card_image:hover {
+    width: 100%;
+    transform: scale(1.1);
+}
+
+.card_name {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card_price {
+    color: var(--text-color);
+    font-family: "Blinker", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem;
+    gap: 0.5rem;
+}
+
+.card_info_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card_color {
+    font-size: 1.2em;
+    font-family: "Blinker", serif;
+    font-weight: 300;
+    font-style: normal;
+    opacity: 80%;
+}
+
+.card_button {
+    padding: 0.3rem;
+    background: #E3FFCE;
+    color: var(--text-color);
+    font-family: "Blinker", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2em;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.color_dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 1px;
+    border: 1px solid #ccc;
+}
+
+.color_dot:first-child{
+    margin-left: 5px;
+}
+.black {
+    background-color: black;
+}
+
+.purple {
+    background-color: #A47AB7;
+}
+
+.white {
+    background-color: white;
+}
+
+.clothes_header {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+
+.basket_logo {
+    font-size: 2em;
+    color: var(--text-color);
+    text-align: start;
+    cursor: pointer;
+}
+
+.categories_name {
+    text-align: center;
+    margin: 0 auto;
+    transform: translate(-10%);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+}
+
+.sort_side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-size: 1.1em;
+    font-family: "Blinker", serif;
+    font-weight: 300;
+    padding: 0.3rem 1.5rem;
+}
+@media (max-width: 1318px) {
+    .card_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 630px) {
+    .card_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+        padding: 0.5rem;
+    }
+
+    .card {
+        padding: 0;
+    }
+
+    .card_button {
+        padding: 0.3rem;
+        background: #E3FFCE;
+        width: 100%;
+        color: var(--text-color);
+        font-family: "Blinker", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.2em;
+        margin: 0;
+    }
+    .card_image:hover {
+        transform: scale(1.03);
+    }
+    .card:hover {
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 790px) {
+    .card_name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: block;
+    }
+}

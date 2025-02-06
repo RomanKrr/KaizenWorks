@@ -1,0 +1,111 @@
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+.banner {
+    width: 100%;
+    position: relative;
+    height: 300px;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.txt {
+    color: var(--cover-text-color);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 0.7rem;
+    position: absolute;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    text-shadow:
+        0.5px 0.5px 0 #000,
+        /* Верхній правий */
+        -0.5px 0.5px 0 #000,
+        /* Верхній лівий */
+        0.5px -0.5px 0 #000,
+        /* Нижній правий */
+        -0.5px -0.5px 0 #000,
+        /* Нижній лівий */
+        0 0.5px 0 #000,
+        /* Верх */
+        0 -0.5px 0 #000,
+        /* Нижній */
+        0.5px 0 0 #000,
+        /* Правий */
+        -0.5px 0 0 #000;
+}
+
+.st {
+    color: var(--cover-text-color);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+    text-shadow:
+        0.5px 0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        0.5px -0.5px 0 #000,
+        -0.5px -0.5px 0 #000,
+        0 0.5px 0 #000,
+        0 -0.5px 0 #000,
+        0.5px 0 0 #000,
+        -0.5px 0 0 #000;
+}
+
+.left {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+}
+
+.right {
+    position: absolute;
+    bottom: 5%;
+    right: 1%;
+    text-align: end;
+}
+
+
+.banner_text{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4em;
+    text-align: center;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+}
+
+
+@media (max-width: 1047px) {
+    .right {
+        max-width: 200px;
+        font-size: 1em;
+    }
+}
+
+.bg-dragon{
+    position: absolute;
+    opacity: 60%;
+    width: 100px;
+    bottom: 15%;
+    right: 1%;
+}

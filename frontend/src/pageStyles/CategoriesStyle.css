@@ -1,0 +1,128 @@
+.categories {
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    width: 80%;
+}
+
+.categories_card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid var(--text-color);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+
+}
+.categories_card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.categories_card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    opacity: 88%;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+.categories_card:hover img {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+
+.categories_card-title {
+    margin-top: 0.8rem;
+    text-align: center;
+    color: var(--text-color);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 525;
+    font-style: normal;
+    font-size: 1.3em;
+    margin: 0.5rem;
+}
+
+
+/* .frame-part{
+    position: absolute;
+    top: 3%;
+    right: 1%;
+} */
+@media (max-width: 768px) {
+    .categories_container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /* 2 колонки */
+        grid-template-rows: 50% 50%;
+        /* 2 рядки */
+        gap: 0;
+        /* Без відступів між картками */
+        width: 100vw;
+        /* Ширина на весь екран */
+        height: 100vh;
+        /* Висота на весь екран */
+    }
+
+    .categories {
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .categories_card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border: none;
+        box-sizing: border-box;
+        border-radius: 0;
+    }
+
+    .categories_card img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .categories_card-title {
+        position: absolute;
+        color: var(--cover-text-color);
+        text-shadow:
+            0.8px 0.8px 0 #000,
+            /* Верхній правий */
+            -0.8px 0.8px 0 #000,
+            /* Верхній лівий */
+            0.8px -0.8px 0 #000,
+            /* Нижній правий */
+            -0.8px -0.8px 0 #000,
+            /* Нижній лівий */
+            0 0.8px 0 #000,
+            /* Верх */
+            0 -0.8px 0 #000,
+            /* Нижній */
+            0.8px 0 0 #000,
+            /* Правий */
+            -0.8px 0 0 #000;
+    }
+}

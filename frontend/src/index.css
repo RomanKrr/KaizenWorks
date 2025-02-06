@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300&display=swap');
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --cover-text-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Футер */
+footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Секції */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.content {
+  background-color: var(--bg-color);
+  height: calc(100vh - 100px);
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* @media (max-width: 768px) {
+  header, footer {
+      padding: 15px;
+  }
+  .banner, .content {
+      height: auto; 
+  }
+} */
+
+
+select {
+  font-size: 1.05em;
+  font-family: "Blinker", serif;
+  font-weight: 300;
+  font-style: normal;
+}

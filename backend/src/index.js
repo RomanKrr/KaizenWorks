@@ -27,13 +27,12 @@ app.use("/api/admin", adminRoute);
 app.use("/api/products", productRoute);
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.resolve("frontend", "dist")));
+    app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
     app.get("*", (req, res) => {
-        res.sendFile(path.resolve("frontend", "dist", "index.html"));
+        res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"))
     });
 }
-
 
 
 app.listen(PORT, () =>{
